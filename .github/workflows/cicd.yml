@@ -21,10 +21,12 @@ jobs:
       - name: Check Go ver
         run: |
             go version
+            ls
       - name: Install dependencies
         run: |
             go get github.com/franela/goblin
       - if: ${{success()}}
-      - name: Test dependency goblin
-        run:
-            go test -v
+        name: Test dependency goblin
+        run: |
+            go test -v -cover
+            ls
