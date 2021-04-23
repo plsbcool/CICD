@@ -1,0 +1,12 @@
+name: Setup Go environment
+ 
+on:
+  push:
+    branches: [main]
+    
+jobs:
+  build:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Check automation
+        uses: actions/checkout@v2
