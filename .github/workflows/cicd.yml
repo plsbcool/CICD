@@ -17,5 +17,4 @@ jobs:
             go-version: '1.15'
       - name: Check Go ver
         run: |
-            go version
             go get github.com/franela/goblin
