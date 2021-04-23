@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
             go get github.com/franela/goblin
-      # - if: ${{success}}
+      - if: ${{success()}}
       - name: Test dependency goblin
         run:
             go test -v
