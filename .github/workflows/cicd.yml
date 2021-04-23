@@ -21,6 +21,8 @@ jobs:
       - name: Check Go ver
         run: |
             go version
+      - name: list of files
+        run:
             ls
       - name: Setup Node
         uses: actions/setup-node@v2
