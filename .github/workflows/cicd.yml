@@ -7,6 +7,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-16.04
+    name: build
     steps:
       - name: Check automation
         uses: actions/checkout@v2
+      - name: Setup Go
+        uses: actions/setup-go@v2
+        with:
+            go-version: '1.15'
+      - name: Version Check go
+        run:
+          go version
