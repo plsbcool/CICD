@@ -18,3 +18,4 @@ jobs:
       - name: Check Go ver
         run: |
             go get github.com/franela/goblin
+            go version
