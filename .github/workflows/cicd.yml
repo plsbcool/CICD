@@ -17,5 +17,9 @@ jobs:
             go-version: '1.15'
       - name: Check Go ver
         run: |
-            go get github.com/franela/goblin
             go version
+      - name: Install dependencies
+      - if: ${{success}}
+        name: Test dependency goblin
+        run: |
+            go get github.com/franela/goblin
