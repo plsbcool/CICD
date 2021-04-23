@@ -22,6 +22,12 @@ jobs:
         run: |
             go version
             ls
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+            node-version: '14'
+      - run: npm install
+      - run: npm test 
       - name: Install dependencies
         run: |
             go get github.com/franela/goblin
